@@ -1,0 +1,28 @@
+@mixin respond-to($breakpoint, $type: "max") {
+  @if $type == "min" {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else if $type == "max" {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Invalid type '#{$type}' specified for respond-to mixin. Please use 'min' or 'max'.";
+  }
+}
+
+@mixin enable-pseudo-element($beforeOrAfter: "before") {
+  display: flex;
+
+  &::#{$beforeOrAfter} {
+    background: {
+      repeat: no-repeat;
+      size: contain;
+      position: center;
+    }
+    content: "";
+    display: block;
+    flex-shrink: 0;
+  }
+}

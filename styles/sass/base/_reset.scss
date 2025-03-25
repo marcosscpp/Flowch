@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+video,
+svg {
+  -webkit-user-select: none;
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+main {
+  overflow: hidden;
+}

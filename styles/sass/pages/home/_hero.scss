@@ -1,0 +1,72 @@
+.hero {
+  text-align: center;
+
+  &__container {
+    width: 85%;
+  }
+
+  &__logo {
+    margin: {
+      bottom: 5rem;
+      left: auto;
+      right: auto;
+    }
+    width: 28rem;
+  }
+
+  &__name {
+    color: $purple-200;
+    margin-bottom: 2.5rem;
+    font: {
+      size: 1.75rem;
+      weight: 600;
+    }
+    text-transform: uppercase;
+  }
+
+  &__headline {
+    font-size: 3.125rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-wrap: balance;
+  }
+
+  &__description {
+    font: {
+      size: 1.25rem;
+    }
+    text-wrap: balance;
+  }
+}
+
+@mixin hero-xl {
+  .hero {
+    background: url("#{$image-path}/hero-bg.svg") no-repeat bottom right / 95%;
+    min-height: 100vh;
+    padding: {
+      bottom: 1.25rem;
+      top: 4.5rem;
+    }
+    &__btn {
+      font-size: 2rem;
+      margin-top: 5rem;
+    }
+  }
+}
+
+@mixin hero-sm {
+  .hero {
+    &__logo {
+      margin-bottom: 2rem;
+      width: 20rem;
+    }
+
+    &__headline {
+      font-size: 2.25rem;
+    }
+
+    &__description {
+      font-size: 1.5rem;
+    }
+  }
+}

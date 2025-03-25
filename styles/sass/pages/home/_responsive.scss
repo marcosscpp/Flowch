@@ -1,0 +1,9 @@
+@include respond-to("xl", $type: "min") {
+  @include hero-xl;
+  @include struggle-xl;
+}
+
+@include respond-to("sm") {
+  @include hero-sm;
+  @include struggle-sm;
+}

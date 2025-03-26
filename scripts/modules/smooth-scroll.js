@@ -2,7 +2,7 @@ export default class SmoothScroll {
   constructor(links, options) {
     this.linksInternos = document.querySelectorAll(links);
     if (options === undefined) {
-      this.options = { behavior: 'smooth', block: 'center' };
+      this.options = { behavior: "smooth", block: "center" };
     } else {
       this.options = options;
     }
@@ -12,14 +12,14 @@ export default class SmoothScroll {
 
   scrollToSection(event) {
     event.preventDefault();
-    const href = event.currentTarget.getAttribute('href');
+    const href = event.currentTarget.getAttribute("href");
     const section = document.querySelector(href);
     section.scrollIntoView(this.options);
   }
 
   addLinkEvent() {
     this.linksInternos.forEach((link) => {
-      link.addEventListener('click', this.scrollToSection);
+      link.addEventListener("click", this.scrollToSection);
     });
   }
 

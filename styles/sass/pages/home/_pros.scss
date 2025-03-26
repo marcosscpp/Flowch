@@ -1,0 +1,109 @@
+.pros {
+  &__container {
+    padding-bottom: 0;
+    width: 85%;
+  }
+
+  &__content {
+    align-items: flex-end;
+    display: flex;
+  }
+
+  &__description {
+    margin-bottom: 2.5rem;
+  }
+
+  &__image {
+    flex-shrink: 0;
+    width: 46rem;
+  }
+
+  &__item {
+    @include enable-pseudo-element;
+    gap: 0.75rem;
+    text-transform: uppercase;
+
+    &::before {
+      background-image: url("#{$icon-path}/check.svg");
+      height: 1.625rem;
+      width: 1.625rem;
+    }
+
+    & + & {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__list {
+    margin-bottom: 3.5rem;
+  }
+
+  &__text {
+    font: {
+      size: 1.25rem;
+      weight: 500;
+    }
+  }
+
+  &__title {
+    color: $purple-200;
+    font: {
+      size: 1.875rem;
+      weight: 600;
+    }
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    text: {
+      transform: uppercase;
+      wrap: balance;
+    }
+  }
+}
+
+@mixin pros-lg-min {
+  .pros {
+    @include enable-pseudo-element;
+    position: relative;
+
+    &::before {
+      background-image: url("#{$image-path}/flowch-icon.svg");
+      bottom: 6rem;
+      height: 14rem;
+      position: absolute;
+      right: 0;
+      transform: translateX(50%);
+      width: 14rem;
+    }
+
+    &__image {
+      margin-right: -5rem;
+    }
+  }
+}
+
+@mixin pros-lg-max {
+  .pros {
+    &__content {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__description,
+    &__title {
+      text-align: center;
+    }
+
+    &__image {
+      max-width: 45rem;
+      width: 100%;
+    }
+
+    &__list {
+      margin: {
+        left: auto;
+        right: auto;
+      }
+      max-width: 35rem;
+    }
+  }
+}

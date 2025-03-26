@@ -1,0 +1,33 @@
+.stripe {
+  background-color: $purple-200;
+  overflow: hidden;
+  padding: 1rem 0;
+
+  &__list {
+    animation: slide 18s linear infinite;
+    display: flex;
+    gap: 18rem;
+    list-style: none;
+    white-space: nowrap;
+    width: 200%;
+  }
+
+  &__item {
+    color: $white;
+    flex-shrink: 0;
+    font: {
+      size: 1.25rem;
+      weight: 700;
+    }
+    text-transform: uppercase;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

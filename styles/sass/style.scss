@@ -17,7 +17,7 @@
 ** Components **
 */
 @import "./components/buttons";
-@import "./components/gradients";
+@import "./components/stripe";
 @import "./components/inputs";
 
 /********************
@@ -26,9 +26,16 @@
 @import "./layout/container";
 
 /********************
+** Utilities **
+*/
+@import "./utilities/background";
+
+/********************
 ** Pages **
 */
 @import "./pages/home/hero";
 @import "./pages/home/struggle";
 @import "./pages/home/pros";
+@import "./pages/home/audience";
+@import "./pages/home/product";
 @import "./pages/home/responsive";

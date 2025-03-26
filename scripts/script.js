@@ -1,12 +1,19 @@
-import SmoothScroll from "./modules/smooth-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import BasicForm from "./modules/form";
-import initAnimeNumbers from "./modules/anime-numbers.js";
 import triggerEvent from "./modules/triggerEvent";
+import initLenis from "./modules/lenis";
+import initSwiper from "./modules/swiper-init";
+
+const lenis = initLenis();
+const swiper = initSwiper();
 
 triggerEvent("Pageview");
-const smoothScroll = new SmoothScroll("a[href^='#']").init();
-AOS.init({ once: true });
-const basicForm = new BasicForm("[data-form]");
-initAnimeNumbers();
+
+AOS.init({
+  once: true,
+  startEvent: "DOMContentLoaded",
+  disableMutationObserver: false,
+});
+
+// const basicForm = new BasicForm("[data-form]");

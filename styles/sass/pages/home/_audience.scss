@@ -1,0 +1,80 @@
+.audience {
+  &__container {
+    width: 88%;
+  }
+
+  &__title {
+    color: $purple-200;
+    font: {
+      size: 2rem;
+      weight: 600;
+    }
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    text: {
+      align: center;
+      transform: uppercase;
+      wrap: balance;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  &__item {
+    border: 3px solid $black;
+    border-radius: 1rem;
+    box-shadow: 0 4px 4px rgba($black, 0.25);
+    display: flex;
+    flex-basis: calc(33% - 2rem);
+    flex-grow: 1;
+    gap: 1.25rem;
+    min-width: 25rem;
+    padding: {
+      bottom: 2.25rem;
+      left: 1.125rem;
+      right: 1.125rem;
+      top: 2.25rem;
+    }
+  }
+
+  &__text {
+    font: {
+      size: 1.25rem;
+      weight: 500;
+    }
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    align-self: center;
+    flex-shrink: 0;
+    width: 4.5rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@mixin audience-md {
+  .audience {
+    &__item {
+      align-items: center;
+    }
+  }
+}
+
+@mixin audience-xs {
+  .audience {
+    &__item {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+  }
+}

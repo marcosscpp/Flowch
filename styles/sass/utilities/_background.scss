@@ -1,0 +1,21 @@
+.bg {
+  &-white {
+    background-color: $white;
+  }
+
+  &-gray-50 {
+    background-color: $gray-50;
+  }
+
+  &-gray-100 {
+    background-color: $gray-100;
+  }
+
+  &-orange-50 {
+    background-color: $orange-50;
+  }
+
+  &-purple-200 {
+    background-color: $purple-200;
+  }
+}

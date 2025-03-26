@@ -13,18 +13,21 @@
   margin: {
     left: auto;
     right: auto;
-    top: 2rem;
+    top: 4rem;
   }
-  padding: 1.25rem 2rem;
-  text-transform: uppercase;
+  padding: 1rem 2rem;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
   width: fit-content;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 
   &:hover {
-    transform: translateY(-0.25rem);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.25rem);
   }
 
   &::before {

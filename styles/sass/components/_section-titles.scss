@@ -1,0 +1,13 @@
+.section-title {
+  color: $purple-200;
+  font: {
+    size: 2rem;
+    weight: 600;
+  }
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+  text: {
+    transform: uppercase;
+    wrap: balance;
+  }
+}

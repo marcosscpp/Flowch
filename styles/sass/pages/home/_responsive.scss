@@ -3,22 +3,41 @@
   @include struggle-lg-min;
   @include pros-lg-min;
   @include product-lg-min;
+  @include features-lg-min;
+  @include vsl-lg-min;
+  @include assurance-lg-min;
+  @include ai-lg-min;
 }
 
 @include respond-to("lg", $type: "max") {
   @include struggle-lg-max;
   @include pros-lg-max;
+  @include features-lg-max;
+  @include vsl-lg-max;
+  @include assurance-lg-max;
 }
 
-@include respond-to("md") {
+@include respond-to("md", $type: "min") {
   @include audience-md;
+  @include ai-md;
+  @include registration-md-min;
+  @include final-call-md-max;
+}
+
+@include respond-to("md", $type: "max") {
+  @include registration-md-max;
+  @include testimonials-md-max;
 }
 
 @include respond-to("sm") {
   @include hero-sm;
   @include product-sm;
+  @include faq-sm;
+  @include testimonials-sm;
+  @include final-call-sm;
 }
 
 @include respond-to("xs") {
   @include audience-xs;
+  @include ai-xs;
 }

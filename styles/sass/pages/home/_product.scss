@@ -9,7 +9,7 @@
   &__item {
     background: $white;
     border: 3px solid $purple-200;
-    border-radius: 0.5rem;
+    border-radius: 1.25rem;
     box-shadow: 0 4px 4px rgba($black, 0.25);
     display: flex;
     gap: 1.25rem;
@@ -39,6 +39,7 @@
     flex-shrink: 0;
     width: 4rem;
     img {
+      object-fit: contain;
       height: 100%;
       width: 100%;
     }

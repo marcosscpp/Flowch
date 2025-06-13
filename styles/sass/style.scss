@@ -18,12 +18,15 @@
 */
 @import "./components/buttons";
 @import "./components/stripe";
-@import "./components/inputs";
+@import "./components/fields";
+@import "./components/section-titles";
+@import "./components/loader";
 
 /********************
 ** Layout **
 */
 @import "./layout/container";
+@import "./layout/footer";
 
 /********************
 ** Utilities **
@@ -37,5 +40,13 @@
 @import "./pages/home/struggle";
 @import "./pages/home/pros";
 @import "./pages/home/audience";
+@import "./pages/home/ai";
 @import "./pages/home/product";
+@import "./pages/home/features";
+@import "./pages/home/vsl";
+@import "./pages/home/assurance";
+@import "./pages/home/registration";
+@import "./pages/home/testimonials";
+@import "./pages/home/faq";
+@import "./pages/home/final-call";
 @import "./pages/home/responsive";

@@ -1,0 +1,142 @@
+.hero {
+  align-items: center;
+  background: linear-gradient(40deg, $purple-200, $orange-50);
+  color: $white;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+
+  &__btn {
+    align-items: center;
+    background: linear-gradient(40deg, #25d366, #128c7e);
+    border-radius: 5rem;
+    cursor: pointer;
+    display: flex;
+    font: {
+      size: 1.75rem;
+      weight: 600;
+    }
+    gap: 2rem;
+    justify-content: center;
+    line-height: 1.2;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 1rem 4rem;
+    position: relative;
+    text: {
+      align: center;
+      transform: uppercase;
+      wrap: balance;
+    }
+    transition: transform 0.3s ease;
+    width: fit-content;
+    z-index: 2;
+
+    img {
+      width: 2rem;
+
+      @include respond-to("md") {
+        display: none;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__container {
+    width: 80%;
+  }
+
+  &__content {
+    margin: 0 auto;
+    margin-top: 1rem;
+
+    @include respond-to("md") {
+      max-width: 40rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-wrap: balance;
+
+    &:first-of-type {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__logo {
+    margin: 0 auto;
+    max-width: 20rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.75rem;
+    margin: {
+      bottom: 0.75rem;
+      top: 3rem;
+    }
+  }
+
+  &__title {
+    font: {
+      size: 3.5rem;
+      weight: 700;
+    }
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+}
+
+.particles-bg {
+  height: 100%;
+  left: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.progress-bar {
+  background-color: $gray-50;
+  border: $white 3px solid;
+  border-radius: 2rem;
+  height: 2rem;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+  max-width: 40rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.progress-bar::after {
+  animation: progressAnimation 3s ease-in-out forwards;
+  background: linear-gradient(90deg, #4caf50, #317934);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+  92% {
+    width: 92%;
+  }
+  100% {
+    width: 97%;
+  }
+}

@@ -1,4 +1,8 @@
 .hero {
+  align-items: center;
+  display: flex;
+  justify-content: baseline;
+  min-height: 100vh;
   text-align: center;
 
   &__container {
@@ -9,6 +13,8 @@
     font: {
       size: 1.25rem;
     }
+    max-width: 54rem;
+    margin: 0 auto;
     text-wrap: balance;
   }
 
@@ -42,10 +48,9 @@
 @mixin hero-lg {
   .hero {
     background: url("#{$image-path}/hero-bg.svg") no-repeat bottom right / 95%;
-    min-height: 100vh;
     padding: {
       bottom: 1.25rem;
-      top: 2rem;
+      top: 1.25rem;
     }
 
     &__btn {
@@ -69,6 +74,10 @@
     &__logo {
       margin-bottom: 2rem;
       width: 20rem;
+    }
+
+    &__btn {
+      width: 100%;
     }
   }
 }

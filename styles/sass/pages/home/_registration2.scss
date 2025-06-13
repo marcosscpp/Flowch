@@ -1,0 +1,111 @@
+.registration {
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 0 2rem;
+    width: 90%;
+  }
+
+  &__aside {
+    background: $purple-200;
+    color: $white;
+    padding: 2rem;
+
+    .registration__title {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text: {
+        align: center;
+        transform: uppercase;
+      }
+    }
+  }
+
+  &__list {
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
+  &__item {
+    @include enable-pseudo-element;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+    font: {
+      size: 1.25rem;
+      weight: 700;
+    }
+
+    &::before {
+      background-image: url("#{$icon-path}/check.svg");
+      height: 1.75rem;
+      width: 1.75rem;
+    }
+
+    & + & {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 1.75rem;
+  }
+
+  &__form {
+    background: rgba($purple-200, 0.2);
+    margin: 0 auto;
+    padding: 3rem;
+  }
+
+  &__submit {
+    margin-top: 3rem;
+    position: relative;
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+
+      .loader-container {
+        display: flex;
+      }
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}
+
+@mixin registration-md-max {
+  .registration {
+    &__container {
+      flex-direction: column;
+      padding: 0;
+    }
+    &__title {
+      padding: 0 2rem;
+    }
+  }
+}
+
+@mixin registration-md-min {
+  .registration {
+    &__aside {
+      border-radius: 2rem;
+      max-width: 35rem;
+    }
+
+    &__form {
+      border: 2px solid $purple-200;
+      max-width: 50rem;
+      border-radius: 2rem;
+    }
+  }
+}

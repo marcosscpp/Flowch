@@ -1,19 +1,14 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
 import BasicForm from "./modules/form";
-import triggerEvent from "./modules/triggerEvent";
+import triggerEvent from "./modules/trigger-event";
+import Faq from "./modules/faq";
 import initLenis from "./modules/lenis";
 import initSwiper from "./modules/swiper-init";
+import initHotjar from "./modules/hotjar-init";
 
 const lenis = initLenis();
-const swiper = initSwiper();
-
 triggerEvent("Pageview");
+initHotjar();
 
-AOS.init({
-  once: true,
-  startEvent: "DOMContentLoaded",
-  disableMutationObserver: false,
-});
-
-// const basicForm = new BasicForm("[data-form]");
+const basicForm = new BasicForm("[data-form]");
+const swiper = initSwiper();
+const faq = new Faq("[data-faq] dt");

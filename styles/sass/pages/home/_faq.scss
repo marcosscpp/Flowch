@@ -1,0 +1,107 @@
+.faq {
+  &__container {
+    width: 55%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__item {
+    font-size: 1.375rem;
+  }
+
+  &__title {
+    color: $white;
+    text-align: center;
+  }
+
+  &__question {
+    user-select: none;
+    cursor: pointer;
+    gap: 1.25rem;
+    align-items: center;
+    background-color: $gray-100;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    font: {
+      size: 1.25rem;
+      weight: 500;
+    }
+
+    &-content {
+      align-items: center;
+      display: flex;
+      gap: 1rem 2rem;
+    }
+
+    &::after {
+      background: url("#{$icon-path}/arrow-black.svg") no-repeat center /
+        contain;
+      content: "";
+      flex-shrink: 0;
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    &.open {
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__icon {
+    height: 4.5rem;
+    width: 3rem;
+  }
+
+  &__answer {
+    max-height: 0;
+    color: $white;
+    padding: 0 2.5rem;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, padding 0.5s ease, opacity 0.3s ease;
+
+    &.open {
+      max-height: 20rem;
+      opacity: 1;
+      padding: 1.25rem 2.5rem;
+    }
+  }
+}
+
+@mixin faq-sm {
+  .faq {
+    text: {
+      align: center;
+      wrap: balance;
+    }
+
+    &__container {
+      padding: 4rem 3rem;
+    }
+
+    &__question {
+      border-radius: 1.25rem;
+      flex-direction: column;
+      &-content {
+        flex-direction: column;
+      }
+    }
+
+    &__answer {
+      font-size: 1.25rem;
+
+      &.open {
+        padding: 2rem 0;
+      }
+    }
+  }
+}

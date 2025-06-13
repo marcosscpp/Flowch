@@ -4,9 +4,9 @@
   padding: 1rem 0;
 
   &__list {
-    animation: slide 18s linear infinite;
+    animation: slide 4s linear infinite;
     display: flex;
-    gap: 18rem;
+    gap: 20rem;
     list-style: none;
     white-space: nowrap;
     width: 200%;
@@ -28,6 +28,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-56.325rem));
   }
 }

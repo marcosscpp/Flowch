@@ -16,50 +16,113 @@
   <script src="./scripts/script.js" type="module" defer></script>
   <!-- End Custom CSS + JS -->
 
-  <title>Flowch</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X95ZLV8FTX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-X95ZLV8FTX');
+  </script>
+  <!-- End Google tag (gtag.js) -->
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WV387W7W');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1316018702983520');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="./assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="./assets/favicons/favicon.ico" />
+  <!-- End Favicons -->
+
+  <meta name="description" content="O Flowch é uma plataforma intuitiva que ajuda empresas a transformar tarefas manuais em processos digitais automatizados, sem a necessidade de programação. Com recursos como formulários personalizados, gestão eficiente de prazos e comunicação centralizada, o Flowch melhora a produtividade e assegura operações consistentes. ">
+  <title>Flowch | Automatização de processos de controle operacional e generencial</title>
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WV387W7W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1316018702983520&ev=PageView&noscript=1" /></noscript>
+
   <main>
     <section class="hero">
       <div class="hero__container container">
         <div class="hero__logo"><img src="./assets/images/flowch-logo-colorfull.svg" alt="Flowch"></div>
         <div class="hero__name">Flowch Automação Comercial</div>
-        <h1 class="hero__headline">Transforme Seu Processo Comercial em Uma Máquina de Vendas Automatizada em 36h</h1>
-        <div class="hero__description">Aumente <strong>30% (ou mais)</strong> do Lucro da Sua Operação de Vendas Com Nossa Plataforma de Automação Comercial</div>
-        <a href="#cadastro" class="main-btn hero__btn">Agende Sua Demonstração VIP</a>
+        <h1 class="hero__headline">Transforme 100% do seu Processo Comercial com IA em Apenas 36h</h1>
+        <div class="hero__description">
+          <strong>Elimine</strong> Tarefas Administrativas, <strong>Aumente</strong> Vendas e <strong>Reduza</strong> Custos Imediatamente!
+          <br>
+          Cadastre-se e Veja Como a Flowch Usa tecnologia de ponta para <strong>Automatizar as suas vendas</strong> de Ponta a Ponta em Apenas <strong>36h</strong>
+        </div>
+        <a href="#cadastro" class="main-btn hero__btn">Quero Ver Como Automatizar Meu Comercial em 36h</a>
       </div>
     </section>
 
     <section class="struggle">
       <div class="struggle__container container">
-        <h1 class="struggle__title">Você sente que sua empresa está presa em processos manuais ultrapassados?</h1>
+        <h1 class="struggle__title">Você Reconhece Esses Problemas?</h1>
         <ul class="struggle__list">
-          <li class="struggle__item">Seus vendedores gastam 50% do tempo com tarefas administrativas em vez de vender</li>
-          <li class="struggle__item">Dados ficam dispersos em planilhas, causando decisões equivocadas</li>
-          <li class="struggle__item">Oportunidades são perdidas por follow‑up manual ineficiente</li>
-          <li class="struggle__item">E o pior: seus processos manuais custam 3x mais que o necessário</li>
+          <li class="struggle__item">Sua equipe comercial perde mais de 50% do tempo com atividades administrativas?</li>
+          <li class="struggle__item">Dados dispersos em planilhas geram decisões imprecisas?</li>
+          <li class="struggle__item">Follow-ups manuais fazem você perder oportunidades valiosas?</li>
+          <li class="struggle__item">Seus processos comerciais custam até 3 vezes mais do que deveriam?</li>
         </ul>
-        <footer class="struggle__footer">O problema real é que CRMs tradicionais e planilhas não foram feitos para o mundo atual</footer>
+        <footer class="struggle__footer">Chega de desperdiçar tempo e dinheiro</footer>
       </div>
     </section>
 
     <section class="pros bg-gray-50">
       <div class="pros__container container">
-        <h1 class="pros__title">Apresentamos o Flowch Automação Comercial</h1>
+        <h1 class="section-title pros__title">Conheça o Flowch Automação Comercial</h1>
         <div class="pros__content">
           <div class="pros__text">
             <div>
-              <p class="pros__description">O sistema ultra avançado que transforma seu processo comercial em uma máquina de vendas automatizada de ponta a ponta</p>
-              <p class="pros__description">Como o sistema circulatório do corpo humano, nós implementamos na sua empresa o Fluxo Vital que vai manter suas vendas pulsando <strong>24 horas por dia, 7 dias por semana</strong></p>
+              <p class="pros__description">Uma plataforma no-code que transforma seu processo comercial em uma máquina automatizada de vendas:
+              </p>
             </div>
 
             <ul class="pros__list">
-              <li class="pros__item">Leads são nutridos automaticamente</li>
-              <li class="pros__item">Oportunidades nunca são esquecidas</li>
-              <li class="pros__item">Vendedores focam 100% em vender</li>
-              <li class="pros__item">Dados centralizados geram decisões precisas</li>
-              <li class="pros__item">Processos fluem sem intervenção manual</li>
+              <li class="pros__item">
+                <div><strong>Automação Completa:</strong> Leads são nutridos automaticamente 24/7, follow-ups precisos e tarefas distribuídas sem intervenção humana.</div>
+              </li>
+              <li class="pros__item">
+                <div><strong>Implementação Ultrarrápida:</strong> Configuração completa em até 36h, sem equipe técnica e sem interrupção das suas vendas.</div>
+              </li>
+              <li class="pros__item">
+                <div><strong>Visibilidade Total:</strong> Dashboard com métricas claras, relatórios automáticos e acompanhamento em tempo real do funil de vendas.</div>
+              </li>
+              <li class="pros__item">
+                <div><strong>Visibilidade Total:</strong> Dashboard com métricas claras, relatórios automáticos e acompanhamento em tempo real do funil de vendas.</div>
+              </li>
             </ul>
           </div>
           <div class="pros__image"><img src="./assets/images/computer-with-metrics.png" alt="Dashboard do Flowch exibido em um notebook, apresentando visualizações claras de processos iniciados, com indicadores de desempenho e atividades pendentes. Interface intuitiva voltada para otimização de fluxos de trabalho e gestão de processos empresariais"></div>
@@ -78,31 +141,109 @@
 
     <section class="audience">
       <div class="audience__container container">
-        <h2 class="audience__title">Esta solução foi desenvolvida especificamente para</h2>
+        <h2 class="section-title audience__title">Quem Precisa do Flowch?</h2>
 
         <ul class="audience__list">
           <li class="audience__item">
             <div class="audience__icon">
               <img src="./assets/icons/ceo.svg" alt="Ícone representando CEOs">
             </div>
-            <p class="audience__text">CEOs e Diretores Comerciais que precisam aumentar vendas eliminando ineficiências operacionais</p>
+            <p class="audience__text">CEOs e Diretores Comerciais focados em aumentar rapidamente suas vendas com apoio de IA</p>
           </li>
 
           <li class="audience__item">
             <div class="audience__icon">
               <img src="./assets/icons/industry.svg" alt="Ícone representando Indústria">
             </div>
-            <p class="audience__text">Empresas B2B de Tecnologia e Indústria com faturamento acima de R$400 mil mensais buscando escalar</p>
+            <p class="audience__text">Empresas B2B (Tecnologia, Indústria, Construção) com faturamento acima de R$ 400 mil/mês</p>
           </li>
 
           <li class="audience__item">
             <div class="audience__icon">
               <img src="./assets/icons/hierarchy.svg" alt="Ícone representando Hierarquia">
             </div>
-            <p class="audience__text">Gestores Comerciais que querem libertar suas equipes de tarefas manuais repetitivas</p>
+            <p class="audience__text">Gestores comerciais que querem automatizar o atendimento e qualificação de leads sem aumentar equipe</p>
+          </li>
+
+          <li class="audience__item">
+            <div class="audience__icon">
+              <img src="./assets/icons/group.png" alt="Ícone representando Hierarquia">
+            </div>
+            <p class="audience__text">Times sobrecarregados que precisam filtrar, priorizar e agendar leads com mais inteligência, sem depender de planilhas ou respostas manuais</p>
           </li>
         </ul>
         <a href="#cadastro" class="main-btn">Clique Aqui e Agende Sua Demonstração VIP</a>
+      </div>
+    </section>
+
+    <section class="ai">
+      <div class="ai__container container">
+        <header class="ai__header">
+          <p class="ai__description section-title">Operação Comercial funcionando com INTELIGÊNCIA ARTIFICIAL de verdade</p>
+          <h1 class="ai__title">Sua empresa ainda depende de pessoas para filtrar leads?</h1>
+          <p>O <strong>agente de IA da Flowch</strong> atua como SDR digital, <strong>qualifica leads em todos os canais</strong> e entrega só o que importa para o <strong>time de vendas</strong></p>
+          <p>Veja como sua <strong>operação comercial pode ganhar escala com IA</strong>, reduzindo custos e <strong>aumentando conversão</strong></p>
+        </header>
+        <div class="ai__content">
+          <ul class="ai__list">
+            <li class="ai__item">
+              <div class="ai__icon">
+                <img src="./assets/icons/ai.png" alt="Ícone de Inteligência Artificial">
+              </div>
+              <p class="ai__text">A IA de Automação Comercial da Flowch atende, tira dúvidas e qualifica leads 24h por dia</p>
+            </li>
+
+            <li class="ai__item">
+              <div class="ai__icon">
+                <img src="./assets/icons/checked.png" alt="Ícone de verificação">
+              </div>
+              <p class="ai__text">Identifica se o contato se encaixa no perfil ideal do seu negócio (ICP)</p>
+            </li>
+
+            <li class="ai__item">
+              <div class="ai__icon">
+                <img src="./assets/icons/users.png" alt="Ícone de chat">
+              </div>
+              <p class="ai__text">Agenda reuniões com leads quentes via link inteligente</p>
+            </li>
+
+            <li class="ai__item">
+              <div class="ai__icon">
+                <img src="./assets/icons/commerce.png" alt="Ícone de comércio">
+              </div>
+              <p class="ai__text">Classifica e prioriza os contatos de acordo com o status de interesse (frio, morno e quente) para o Account Executive</p>
+            </li>
+
+            <li class="ai__item">
+              <div class="ai__icon">
+                <img src="./assets/icons/intervention.png" alt="Ícone de intervenção">
+              </div>
+              <p class="ai__text">Alimenta o processo comercial sem intervenção humana</p>
+            </li>
+
+            <li class="ai__item">
+              <div class="ai__icon">
+                <img src="./assets/icons/commerce.png" alt="Ícone de Comércio">
+              </div>
+              <p class="ai__text">Acompanha pedidos, gera 2ª via de boletos e orienta sobre trocas e devoluções</p>
+            </li>
+
+            <li class="ai__item">
+              <div class="ai__icon">
+                <img src="./assets/icons/mobile-payment.png" alt="Ícone de Pagamento">
+              </div>
+              <p class="ai__text">Integra com ERPs e bancos digitais</p>
+            </li>
+
+
+            <li class="ai__item">
+              <div class="ai__icon">
+                <img src="./assets/icons/support.png" alt="Ícone de Suporte">
+              </div>
+              <p class="ai__text">Escala o atendimento sem contratar mais ninguém </p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -176,8 +317,261 @@
         </div>
       </div>
     </section>
-    <section style="height: 100vh;"></section>
+
+    <section class="features">
+      <div class="features__container container">
+        <header class="features__header">
+          <h1 class="features__title section-title">O Motor da sua Máquina de Vendas</h1>
+          <p class="features__description">O Flowch Automação Comercial, além de te entregar um processo comercial validado e pronto, é uma plataforma no-code que transforma seu negócio em uma máquina de vendas automatizada</p>
+        </header>
+
+        <div class="features__content bg-gray-50">
+          <h2 class="features__subtitle section-title">Veja Como</h2>
+          <ul class="features__list">
+            <li class="features__group">
+              <div class="feature__item">
+                <header>
+                  <div class="feature__icon">
+                    <img src="./assets/icons/gear.svg" alt="Ícone de engrenagem">
+                  </div>
+                  <h3 class="feature__item-title">Automação Total</h3>
+                </header>
+                <div class="feature__text">
+                  <ul class="feature__item-list">
+                    <li>Leads são nutridos automaticamente 24/7</li>
+                    <li>Follow-up acontece no momento exato</li>
+                    <li>Tarefas são distribuídas sem intervenção manual</li>
+                    <li>Dados são atualizados em tempo real</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="feature__item">
+                <header>
+                  <div class="feature__icon">
+                    <img src="./assets/icons/puzzle.svg" alt="Ícone de quebra-cabeça">
+                  </div>
+                  <h3 class="feature__item-title">Implementação Rápida</h3>
+                </header>
+                <div class="feature__text">
+                  <ul class="feature__item-list">
+                    <li>Setup completo em até 36h</li>
+                    <li>Zero conhecimento técnico necessário</li>
+                    <li>Integração com suas ferramentas atuais</li>
+                    <li>Treinamento incluído para toda equipe por 12 semanas</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="feature__item">
+              <header>
+                <div class="feature__icon">
+                  <img src="./assets/icons/chart.svg" alt="Ícone de gráfico">
+                </div>
+                <h3 class="feature__item-title">Visibilidade Completa</h3>
+              </header>
+              <div class="feature__text">
+                <ul class="feature__item-list">
+                  <li>Dashboard centralizado com métricas comerciais</li>
+                  <li>Acompanhamento em tempo real do funil</li>
+                  <li>Relatórios automáticos de performance</li>
+                  <li>Previsibilidade de vendas</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="vsl">
+      <div class="vsl__container container">
+        <header class="vsl__header">
+          <h1 class="vsl__title">Veja como o Flowch implementa e automatiza seu processo comercial em até 36h</h1>
+          <div class="vsl__image">
+            <img src="./assets/images/laptop-and-smartphone.png" alt="">
+          </div>
+        </header>
+        <div class="vsl__content">
+          <div class="vsl__video">
+            <div id="vid_67e6ae1a19ac523c4a373d97" style="position: relative; width: 100%; padding: 56.25% 0 0;"> <img id="thumb_67e6ae1a19ac523c4a373d97" src="https://images.converteai.net/e2d39b57-8454-47b1-a4e0-1f4c0e6c30db/players/67e6ae1a19ac523c4a373d97/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail">
+              <div id="backdrop_67e6ae1a19ac523c4a373d97" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; "></div>
+            </div>
+            <script type="text/javascript" id="scr_67e6ae1a19ac523c4a373d97"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/e2d39b57-8454-47b1-a4e0-1f4c0e6c30db/players/67e6ae1a19ac523c4a373d97/player.js", s.async = !0, document.head.appendChild(s); </script>
+          </div>
+          <a href="#cadastro" class="vsl__button main-btn">Clique Aqui e Agende Sua Demonstração VIP</a>
+        </div>
+      </div>
+    </section>
+    <section class="assurance bg-purple-200">
+      <div class="assurance__container container">
+        <h1 class="assurance__title">Garantia Dupla de Resultado</h1>
+        <div class="assurance__content">
+          <img class="assurance__image" src="./assets/images/purple-check.png" alt="">
+          <div class="assurance__text">
+            <strong>Garantia de Configuração</strong>
+            <p>Se não configurarmos seu sistema em 36 horas como prometido, você não paga nada</p>
+          </div>
+        </div>
+      </div>
+      <footer class="assurance__footer">Sem perguntas. Sem burocracia. Risco zero.</footer>
+    </section>
+
+    <section class="registration">
+      <div class="registration__container container">
+        <aside class="registration__aside">
+          <h1 class="registration__title">Pronto para automatizar seu processo comercial em 36h?</h1>
+          <p class="registration__text">
+            Receba uma análise personalizada do seu processo comercial e veja exatamente como vamos ajudar você a vender mais e melhor em apenas 36h.
+          </p>
+        </aside>
+
+        <form class="registration__form" data-form>
+          <h1 class="registration__title section-title">Agende Agora Sua Demonstração VIP Gratuita!</h1>
+          <div class="registration__fields" id="cadastro">
+            <div class="field">
+              <input type="text" placeholder="Seu nome completo: " name="name" id="name" class="field__input" required>
+              <span class="error-message"></span>
+            </div>
+
+            <div class="field">
+              <input type="email" placeholder="Seu E-mail:" name="email" id="email" class="field__input" required>
+              <span class="error-message"></span>
+            </div>
+
+            <div class="field">
+              <input type="tel" name="phone" placeholder="Seu WhatsApp (com DDD):" id="phone" class="field__input" required>
+              <span class="error-message"></span>
+            </div>
+
+            <div class="field">
+              <select name="revenue" id="revenue" class="field__input" required>
+                <option value="">Qual seu Faturamento Anual?</option>
+                <option value="A360">Até R$ 360 mil</option>
+                <option value="1M2">De R$ 360 mil a R$ 1,2 milhão</option>
+                <option value="4M8">De R$ 1,2 milhão a R$ 4,8 milhões</option>
+                <option value="10M">De R$ 4,8 milhões a R$ 10 milhões</option>
+                <option value="50M">De R$ 10 milhões a R$ 50 milhões</option>
+                <option value="100M">Mais de R$ 50 milhões</option>
+              </select>
+
+              <span class="error-message"></span>
+            </div>
+          </div>
+          <button type="submit" class="main-btn registration__submit">Quero Automatizar Minhas Vendas em 36h<div class="loader-container">
+              <div class="loader"></div>
+            </div> </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="testimonials__container container">
+        <h1 class="testimonials__title">O Que Nossos Clientes Estão Dizendo:</h1>
+        <p class="testimonials__text">Veja a experiência de quem já transformou seu processo comercial com o Flowch</p>
+
+        <div class="testimonials__cards">
+          <div class="testimonials__card">
+            <div class="testimonials__card-header">
+              <div class="testimonials__card-avatar">
+                <img src="./assets/images/client-avatar-1.jpg" alt="Ricardo Silveira">
+              </div>
+              <div class="testimonials__card-info">
+                <h3 class="testimonials__card-name">Ricardo Silveira</h3>
+                <p class="testimonials__card-role">CEO da Modware Inova</p>
+              </div>
+            </div>
+            <div class="testimonials__card-body">
+              <p class="testimonials__card-quote">Reduzimos em 35% nossos custos administrativos e aumentamos vendas em 40% no primeiro trimestre após implementação da Flowch!</p>
+              <div class="testimonials__card-rating">
+                <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials__card">
+            <div class="testimonials__card-header">
+              <div class="testimonials__card-avatar">
+                <img src="./assets/images/client-avatar-2.jpg" alt="Camila Rodrigues">
+              </div>
+              <div class="testimonials__card-info">
+                <h3 class="testimonials__card-name">Camila Rodrigues</h3>
+                <p class="testimonials__card-role">Diretora Comercial</p>
+              </div>
+            </div>
+            <div class="testimonials__card-body">
+              <p class="testimonials__card-quote">Implementação rápida e sem burocracia. Nossa equipe comercial hoje foca apenas no que sabe fazer melhor: vender.</p>
+              <div class="testimonials__card-rating">
+                <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq bg-purple-200">
+      <div class="faq__container container">
+        <h1 class="faq__title section-title">Perguntas Frequentes (FAQ)</h1>
+        <dl class="faq__list" data-faq>
+          <div class="faq__item">
+            <dt class="faq__question">
+              <div class="faq__question-content">
+                <img src="./assets/icons/gears.svg" alt="Ícone de configuração" class="faq__icon">
+                1. Preciso parar minha operação atual?
+              </div>
+            </dt>
+            <dd class="faq__answer">Não. A implementação acontece em paralelo, sem interrupção das suas atividades.</dd>
+          </div>
+
+          <div class="faq__item">
+            <dt class="faq__question">
+              <div class="faq__question-content">
+                <img src="./assets/icons/smartphone.svg" alt="Ícone de smartphone" class="faq__icon">
+                2. Minha equipe precisa ter conhecimento técnico?
+              </div>
+            </dt>
+            <dd class="faq__answer">Absolutamente não. A interface é intuitiva, e oferecemos treinamento completo.</dd>
+          </div>
+
+          <div class="faq__item">
+            <dt class="faq__question">
+              <div class="faq__question-content">
+                <img src="./assets/icons/assurance.svg" alt="Ícone de escudo com check" class="faq__icon">
+                3. Como funciona a implementação em 36h?
+              </div>
+            </dt>
+            <dd class="faq__answer">Nossa implementação é rápida e transparente, realizada em paralelo com sua operação atual, garantindo resultados concretos sem burocracia.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="final-call">
+      <div class="final-call__container container">
+        <h1 class="final-call__title">Implementação em 36h. Sem Burocracia.</h1>
+        <p class="final-call__description">Transforme hoje mesmo suas vendas em uma máquina automatizada e aumente seu lucro de maneira comprovada.</p>
+        <a href="#cadastro" class="main-btn final-call__btn">Clique Aqui e Agende Sua Demonstração VIP</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <img src="./assets/images/flowch-logo-monochromatic.svg" alt="Flowch">
+    <a class="footer__link" href="https://atardigital.com.br/v3">
+      Comunicação
+      <img src="./assets/images/logo-atar.svg" alt="Atar Inteligência Digital">
+    </a>
+  </footer>
+
+  <a href="#cadastro" class="mobile-fixed-btn">
+    <span class="icon">
+      <img src="./assets/icons/ray.svg" alt="Ícone de raio">
+    </span>
+    Agendar Diagnóstico VIP Gratuito
+    <span class="icon">
+      <img src="./assets/icons/rising.svg" alt="Ícone de gráfico subindo">
+    </span>
+  </a>
 </body>
 
 </html>

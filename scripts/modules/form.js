@@ -1,8 +1,4 @@
-import {
-  validateCompleteName,
-  validatePhone,
-  validateCNPJ,
-} from "../utils/validate.js";
+import { validateCompleteName, validatePhone } from "../utils/validate.js";
 import debounce from "../utils/debounce.js";
 import Toast from "../utils/toast.js";
 
@@ -24,6 +20,9 @@ export default class BasicForm {
         patternMismatch: "Por favor, preencha um nome válido.",
         tooShort: "Por favor, preencha um nome válido.",
       },
+      company: {
+        valueMissing: "O campo de nome da empresa não pode estar vazio.",
+      },
       email: {
         valueMissing: "O campo de e-mail não pode estar vazio.",
         typeMismatch: "Por favor, preencha um email válido.",
@@ -34,17 +33,11 @@ export default class BasicForm {
         patternMismatch: "Digite um número de telefone válido.",
         tooShort: "O campo de celular não tem dígitos suficientes.",
       },
-      company: {
-        valueMissing: "O campo de empresa não pode estar vazio.",
-      },
-      socialMedia: {
-        valueMissing: "O campo de rede social ou site não pode estar vazio.",
-      },
       revenue: {
-        valueMissing: "Selecione uma opção de faturamento.",
+        valueMissing: "Selecione o faturamento mensal da sua empresa.",
       },
-      cnpj: {
-        valueMissing: "O campo de CNPJ não pode estar vazio.",
+      "team-size": {
+        valueMissing: "Selecione o tamanho do seu time comercial.",
       },
     };
 
@@ -52,7 +45,6 @@ export default class BasicForm {
     this.fields = this.formElement.querySelectorAll("input, select");
     this.disableDefaultError();
     this.enabledPhoneMask();
-    this.enableCNPJMask();
     this.initFields();
     this.initSubmit();
   }
@@ -80,23 +72,25 @@ export default class BasicForm {
         formData.set(key, value);
       });
 
+      const submitBtn = this.formElement.querySelector("[type='submit']");
       try {
+        submitBtn.setAttribute("disabled", true);
         const metaApiResponse = await fetch("./php/pixel-submit.php", {
           method: "POST",
           body: formData,
         });
 
-        const rdResponse = await fetch("./php/rd-submit.php", {
+        const response = await fetch("./php/submit.php", {
           method: "POST",
           body: formData,
         });
 
-        const result = await rdResponse.json();
+        const result = await response.json();
 
         if (result.erro) {
           toast.createToast(result.errorMessage, "error");
         } else {
-          const url = "https://atardigital.com.br/proximos-passos";
+          const url = "http://lp.flowch.com/obrigado";
           toast.createToast("Formulário enviado com sucesso!", "success");
           this.formElement.reset();
           window.open(url, "_blank");
@@ -106,40 +100,9 @@ export default class BasicForm {
           "Erro no envio do formulário. Tente novamente.",
           "error"
         );
+      } finally {
+        submitBtn.removeAttribute("disabled");
       }
-    });
-  }
-
-  toggleCNPJVisibility() {
-    const CNPJInput = this.formElement.cnpj;
-    const CNPJContainer = CNPJInput.parentElement;
-    const revenueValue = this.formElement.revenue;
-    if (CNPJContainer && revenueValue.selectedIndex === 1) {
-      CNPJContainer.classList.remove("field--hidden");
-      CNPJInput.setAttribute("required", true);
-    } else {
-      CNPJContainer.classList.add("field--hidden");
-      CNPJInput.removeAttribute("required");
-    }
-  }
-
-  enableCNPJMask() {
-    this.formElement.querySelectorAll("[name='cnpj']").forEach((cnpjInput) => {
-      cnpjInput.addEventListener("input", (e) => {
-        let formattedCNPJ = e.target.value.replace(/\D/g, "");
-
-        if (formattedCNPJ.length > 14) {
-          formattedCNPJ = formattedCNPJ.slice(0, 14);
-        }
-
-        formattedCNPJ = formattedCNPJ
-          .replace(/^(\d{2})(\d)/, "$1.$2")
-          .replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3")
-          .replace(/\.(\d{3})(\d)/, ".$1/$2")
-          .replace(/(\d{4})(\d)/, "$1-$2");
-
-        e.target.value = formattedCNPJ;
-      });
     });
   }
 
@@ -174,37 +137,40 @@ export default class BasicForm {
     this.formElement.querySelectorAll("[type='tel']").forEach((tel) => {
       tel.addEventListener("input", (e) => {
         let formattedNumber = e.target.value.replace(/\D/g, "");
-
-        if (formattedNumber.length > 13) {
-          formattedNumber = formattedNumber.slice(0, 13);
+  
+        if (formattedNumber.startsWith("55") && formattedNumber.length > 11) {
+          formattedNumber = formattedNumber.slice(2);
         }
-
-        if (formattedNumber.length > 2) {
-          const ddi = formattedNumber.slice(0, 2);
-          const restOfNumber = formattedNumber.slice(2);
-
-          let formatted = restOfNumber.replace(/^(\d{2})(\d)/g, "($1) $2");
-          formatted = formatted.replace(/(\d)(\d{4})$/, "$1-$2");
-
-          formattedNumber = `+${ddi} ${formatted}`;
+  
+        if (formattedNumber.length > 11) {
+          formattedNumber = formattedNumber.slice(0, 11);
         }
-
+  
+        if (formattedNumber.length >= 2) {
+          const ddd = formattedNumber.slice(0, 2);
+          const number = formattedNumber.slice(2);
+  
+          let formatted = number.replace(/^(\d{5})(\d{0,4})/, "$1-$2");
+          if (number.length <= 8) {
+            formatted = number.replace(/^(\d{4})(\d{0,4})/, "$1-$2");
+          }
+  
+          formattedNumber = `(${ddd}) ${formatted}`.trim();
+        }
+  
         e.target.value = formattedNumber;
       });
     });
   }
+  
 
   checkField(field) {
     let msg;
     field.setCustomValidity("");
     if (field.name == "name") {
-      validateCompleteName(field, 1, 2);
+      validateCompleteName(field, 2, 2);
     } else if (field.name == "phone") {
       validatePhone(field);
-    } else if (field.name == "revenue") {
-      this.toggleCNPJVisibility();
-    } else if (field.name == "cnpj") {
-      validateCNPJ(field);
     }
 
     this.errorTypes.forEach((erro) => {

@@ -20,34 +20,20 @@ export default function initLenis() {
 
   requestAnimationFrame(raf);
 
-  document.addEventListener("scroll", onScroll);
-
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute("href"));
-      if (target) {
-        lenis.scrollTo(target, {
-          offset: -100,
-          duration: 2,
-        });
-      }
+  const linksList = document.querySelectorAll('a[href^="#"]');
+  if (linksList.length > 0) {
+    linksList.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute("href"));
+        if (target) {
+          lenis.scrollTo(target, {
+            offset: -window.innerHeight / 2 + target.offsetHeight / 2,
+            duration: 2,
+          });
+        }
+      });
     });
-  });
-
-  function setupFormFocusPause() {
-    const inputs = document.querySelectorAll("input, textarea");
-    inputs.forEach((input) => {
-      input.addEventListener("focus", () => lenis.stop());
-      input.addEventListener("blur", () => lenis.start());
-    });
-  }
-
-  setupFormFocusPause();
-
-  function onScroll() {
-    // Você pode adicionar lógica adicional aqui se necessário
-    // Por exemplo, mostrar/esconder elementos com base no scroll
   }
 
   return lenis;

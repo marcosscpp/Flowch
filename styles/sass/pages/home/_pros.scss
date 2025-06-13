@@ -40,23 +40,13 @@
 
   &__text {
     font: {
-      size: 1.25rem;
+      size: 1.125rem;
       weight: 500;
     }
   }
 
   &__title {
-    color: $purple-200;
-    font: {
-      size: 1.875rem;
-      weight: 600;
-    }
-    line-height: 1.2;
     margin-bottom: 1.25rem;
-    text: {
-      transform: uppercase;
-      wrap: balance;
-    }
   }
 }
 
@@ -84,13 +74,16 @@
 @mixin pros-lg-max {
   .pros {
     &__content {
-      align-items: center;
       flex-direction: column;
     }
 
     &__description,
     &__title {
       text-align: center;
+    }
+
+    &__description {
+      text-wrap: balance;
     }
 
     &__image {
@@ -104,6 +97,7 @@
         right: auto;
       }
       max-width: 35rem;
+      text-wrap: balance;
     }
   }
 }

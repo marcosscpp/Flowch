@@ -134,6 +134,11 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.25.1.tgz#7d79922cb2d88f9048f06393dbf62d2e4accb584"
   integrity sha512-Y1EQdcfwMSeQN/ujR5VayLOJ1BHaK+ssyk0AEzPjC+t1lITgsnccPqFjb6V+LsTp/9Iov4ysfjxLaGJ9RPtkVg==
 
+"@hotjar/browser@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@hotjar/browser/-/browser-1.0.9.tgz#769b4ded3fa7b9557b785c107f0cd76d3f83789a"
+  integrity sha512-n9akDMod8BLGpYEQCrHwlYWWd63c1HlhUSXNIDfClZtKYXbUjIUOFlNZNNcUxgHTCsi4l2i+SWKsGsO0t93S8w==
+
 "@img/sharp-darwin-arm64@0.33.5":
   version "0.33.5"
   resolved "https://registry.yarnpkg.com/@img/sharp-darwin-arm64/-/sharp-darwin-arm64-0.33.5.tgz#ef5b5a07862805f1e8145a377c8ba6e98813ca08"

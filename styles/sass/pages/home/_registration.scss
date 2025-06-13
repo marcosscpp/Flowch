@@ -1,0 +1,89 @@
+.registration {
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 90%;
+  }
+
+  &__aside {
+    background: $purple-200;
+    color: $white;
+    padding: 2rem;
+
+    .registration__title {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      text: {
+        align: center;
+        wrap: balance;
+        transform: uppercase;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+    text-wrap: balance;
+    font-size: 1.25rem;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 1.75rem;
+  }
+
+  &__form {
+    background: rgba($purple-200, 0.2);
+    margin: 0 auto;
+    padding: 3rem;
+  }
+
+  &__submit {
+    margin-top: 3rem;
+    position: relative;
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+
+      .loader-container {
+        display: flex;
+      }
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}
+
+@mixin registration-md-max {
+  .registration {
+    &__container {
+      gap: 0;
+      padding: 0;
+    }
+    &__title {
+      padding: 0 2rem;
+    }
+
+  }
+}
+
+@mixin registration-md-min {
+  .registration {
+    &__aside {
+      border-radius: 2rem;
+      max-width: 50rem;
+    }
+
+    &__form {
+      border: 2px solid $purple-200;
+      max-width: 50rem;
+      border-radius: 2rem;
+    }
+  }
+}

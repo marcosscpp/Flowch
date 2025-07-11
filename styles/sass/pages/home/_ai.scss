@@ -1,8 +1,8 @@
 .ai {
+  position: relative;
   &__header {
     max-width: 65rem;
     margin: 0 auto;
-    margin-bottom: 3rem;
     text-align: center;
 
     p {
@@ -49,6 +49,11 @@
     }
   }
 
+  &__image {
+    max-width: 22rem;
+    margin: 0 auto;
+  }
+
   &__text {
     font: {
       size: 1.125rem;
@@ -77,6 +82,16 @@
 
     &__container {
       padding-bottom: 4rem;
+    }
+
+    &__header {
+      margin-bottom: 3rem;
+    }
+
+    &__image {
+      position: absolute;
+      top: 0;
+      right: -3rem;
     }
   }
 }

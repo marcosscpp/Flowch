@@ -19,12 +19,12 @@
 
 @include respond-to("md", $type: "min") {
   @include audience-md;
-  @include ai-md;
   @include registration-md-min;
   @include final-call-md-max;
 }
 
 @include respond-to("md", $type: "max") {
+  @include ai-md;
   @include registration-md-max;
   @include testimonials-md-max;
 }
